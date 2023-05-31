@@ -22,7 +22,7 @@ export const useChatScreen = () => {
   const openAICall = async (
     messages: IChatItem[]
   ): Promise<AxiosResponse<CreateChatCompletionResponse, any>> => {
-    const apiKey = Config.REACT_APP_API_URL;
+    const apiKey = Config.REACT_APP_API_URL ?? '';
     const url = Config.REACT_APP_OPENAPIKEY ?? '';
 
     const oaiMessages = messages.map((message) => {
